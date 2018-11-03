@@ -4,35 +4,40 @@ using namespace std;
 
 class Zwierze
 {
-  string gatunek;
-  string imie;
-  int wiek;
+    public:
+    string gatunek;
+    string imie;
+	int wiek;
 
-  void dodaj_zwierze()
-  {
-      out >> "Dodaj nowe zwierze do bazy" << endl;
-      cout >> "Podaj gatunek" << endl;
-      cin gatunek;
-      cout >> "Podaj imie" << endl;
-      cin imie;
-      cout >> "Podaj wiek" << endl;
-      cin wiek;
-  }
+    void dodaj_zwierze()
+    {
+		cout<<endl<<"DODAWANIE NOWEGO ZWIERZECIA DO BAZY: "<<endl;
+        cout<<"Podaj gatunek: ";
+        cin>>gatunek;
+        cout<<"Podaj imie: ";
+        cin>>imie;
+        cout<<"Podaj wiek: ";
+        cin>>wiek;
+	}
 
-  void daj_glos()
-  {
-      if(gatunek=="kot") cout<<imie<< " lat "<<wiek<<": Miau!";
-      else if (gatunek=="koza") cout<<imie<< " lat "<<wiek<<": Beee!";
-      else if (gatunek=="krowa") cout<<imie<< " lat "<<wiek<<": Muuu!";
-      else cout <<"Nieznany gatunek";
-
-  }
-
-
+    void daj_glos()
+    {
+        if (gatunek=="kot")   cout<<imie<<" lat "<<wiek<<": Miau!";
+        else if (gatunek=="koza")  cout<<imie<<" lat "<<wiek<<": Beeeee!";
+        else if (gatunek=="krowa") cout<<imie<<" lat "<<wiek<<": Muuuuu!";
+        else cout<<"nieznany gatunek! Moze jakies UFO?!";
+    }
 };
 
 int main()
 {
-    cout << "Hello world!" << endl;
+    Zwierze z1;
+    z1.dodaj_zwierze();
+    z1.daj_glos();
+
+    Zwierze z2;
+    z2.dodaj_zwierze();
+    z2.daj_glos();
+
     return 0;
 }
